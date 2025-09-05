@@ -1,0 +1,78 @@
+.cadastro-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: left;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%; /* Permite que os campos fiquem lado a lado */
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.cadastrar-btn {
+  width: 150px;
+  padding: 12px;
+  background-color: #8c76f9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end; /* Alinha o botão à direita */
+}
+
+.cadastrar-btn:hover {
+  background-color: #7b62e0;
+}
+
+.mensagem {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  color: #333;
+  background-color: #e0e0e0;
+}
