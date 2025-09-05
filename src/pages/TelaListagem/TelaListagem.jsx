@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './TelaListagem.css'; 
+import { Link } from 'react-router-dom';
 
 function ProdutosCadastrados() {
   const [produtos, setProdutos] = useState([]);
@@ -48,7 +49,9 @@ function ProdutosCadastrados() {
                 <p className="descricao">{produto.descricao}</p>
                 <div className="botoes-card">
                   <button className="deletar-btn">Deletar</button>
-                  <button className="editar-btn">Editar</button>
+                  <Link to={`/produtos/editar/${produto.id}`} className="editar-btn">
+                    Editar!
+                  </Link>
                 </div>
               </div>
             </div>
