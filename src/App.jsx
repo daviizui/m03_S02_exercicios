@@ -14,6 +14,7 @@ function App() {
       <Route path="/envios/editar/:id" Component={EnvioForm} />
       <Route path="/produtos/cadastro" Component={CadastroDeProduto}/>
       <Route path="/produtos/listagem" Component={TelaListagem} />
+      <Route path="/produtos/editar/:id" element={<CadastroDeProduto />} />
 
     </Routes>
   );

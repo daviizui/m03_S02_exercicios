@@ -99,7 +99,7 @@ function EnvioForm() {
         .catch(() => alert("Erro cadastrar envio"));
     }
   }
-
+{/*}
   async function salvarEnvioComTryCatch(event) {
     try {
       event.preventDefault();
@@ -121,6 +121,7 @@ function EnvioForm() {
       alert("Erro cadastrar envio");
     }
   }
+    */}
 
   // Lógica para a edição funcionar
   useEffect(() => {
@@ -133,7 +134,7 @@ function EnvioForm() {
         })
         .catch(() => alert("erro ao buscar dados"));
     }
-  }, []);
+  }, [params.id]);
 
   return (
     <form onSubmit={salvarEnvio}>
