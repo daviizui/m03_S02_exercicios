@@ -72,7 +72,7 @@ function ProdutosCadastrados() {
                     className="deletar-btn"
                     onClick={() => handleDelete(produto.id, produto.nome)}
                   >
-                    Deletar
+                    Deletar!
                   </button>
                   <button className="editar-btn">Editar</button>
                 </div>
