@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './TelaListagem.css';
+
+import './TelaListagem.css'; 
+import { Link } from 'react-router-dom';
+
 
 function ProdutosCadastrados() {
   const [produtos, setProdutos] = useState([]);
@@ -67,14 +70,17 @@ function ProdutosCadastrados() {
                 <h3>{produto.nome} - R$ {produto.preco.toFixed(2).replace('.', ',')}</h3>
                 <p className="descricao">{produto.descricao}</p>
                 <div className="botoes-card">
-                  {/* Botão de Deletar com o evento onClick */}
+
                   <button 
                     className="deletar-btn"
                     onClick={() => handleDelete(produto.id, produto.nome)}
                   >
                     Deletar
                   </button>
-                  <button className="editar-btn">Editar</button>
+                  <Link to={`/produtos/editar/${produto.id}`} className="editar-btn">
+                    Editar!
+                  </Link>
+
                 </div>
               </div>
             </div>
